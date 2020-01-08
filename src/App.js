@@ -1,70 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const foodILike = [
-   {
-      id: 1,
-      name: 'food1',
-      image: 'https://picsum.photos/id/1/100/100',
-      rating: 5
-   },
-   {
-      id: 2,
-      name: 'food2',
-      image: 'https://picsum.photos/id/2/100/100',
-      rating: 4.9
-   },
-   {
-      id: 3,
-      name: 'food3',
-      image: 'https://picsum.photos/id/3/100/100',
-      rating: 4.8
-   },
-   {
-      id: 4,
-      name: 'food4',
-      image: 'https://picsum.photos/id/4/100/100',
-      rating: 5.5
-   },
-   {
-      id: 5,
-      name: 'food5',
-      image: 'https://picsum.photos/id/5/100/100',
-      rating: 4.7
+class App extends React.Component {
+   // 1 state를 선언한 아래 부분이 state다. 아래에서 부터 line 21는 외워라.
+   state = {
+      count: 0
+   };
+
+   add = () => {
+      // this.setState(current => ({ count: this.state.count + 1 }));
+      this.setState(current => ({ count: current.count + 1 }));
+
+   };
+   // this.state.count 에서 state는 위의 1 아래 선언된 부분의 count 이다.
+   
+   minus = () => {
+      // this.setState(current => ({ count: this.state.count - 1 }));
+      this.setState(current => ({ count: current.count - 1 }));
+   };
+   // current keyword?를 사용하여 this.state를 'current'로 대체시킬 수 있다.
+
+   // add, minus에 값을 직접 지정하면 'Do not mutate state directly. Use setState()  react/no-direct-mutation-state'처럼 값을 직접 지정하지 말라는 경고가 뜬다.
+   // state 속의 값이 바뀌면 state가 update되고, update 된 결과로 state를 refresh시켜 re-render가 발생한다.
+
+   render() {
+      return (
+         <div>
+            <h1>The number is : {this.state.count}. </h1>
+            <button onClick={this.add}>Add</button>
+            <button onClick={this.minus}>Minus</button>
+         </div>
+
+      )
    }
-];
-// id: 는 기본적으로 react 내부에서 사용하기 위하여 만든다.
-
-function Food({ name, picture, rating }) {
-   return (
-      <React.Fragment>
-         <h3>I like {name}. </h3>
-         <h4>{rating}/5.0</h4>
-         <img src={picture} alt={name} />
-      </React.Fragment>
-   )
-}
-
-Food.propTypes = {
-   name: PropTypes.string.isRequired,
-   picture: PropTypes.string.isRequired,
-   rating: PropTypes.number.isRequired,
-}
-
-function App() {
-   return (
-      <div>
-         <h1 style={{ textAlign: 'center' }}>Favorite Food</h1>
-         {foodILike.map(dish => (
-            <Food
-               key={dish.id}
-               name={dish.name}
-               picture={dish.image}
-               rating={dish.rating}
-            />
-         ))}
-      </div>
-   )
 }
 
 export default App;
