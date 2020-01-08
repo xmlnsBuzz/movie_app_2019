@@ -1,0 +1,7 @@
+{
+   "editor.snippetSuggestions": "top",
+   "emmet.showSuggestionsAsSnippets": true,
+   "editor.tabCompletion": "on",
+   "search.quickOpen.includeSymbols": true,
+   "editor.wordBasedSuggestions": false
+}
