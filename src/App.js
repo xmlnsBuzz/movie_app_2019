@@ -1,35 +1,44 @@
 import React from 'react';
-function Potato({ fav }) {
-   console.log(fav)
-   return <h3>I {fav}love potato.</h3>
+function Food({ name, picture }) {
+   return (
+      <React.Fragment>
+         <h3>I like {name}.</h3>
+         <img src={picture} />
+      </React.Fragment>
+   )
 }
 
-/* 
-function args에 모든 props를 넣고 싶을 때는 fucntion(props)
-               특정 props를   "     "     function({propsNames,}*) 
- */
+const foodILike = [
+   {
+      name: 'food1',
+      image: 'https://picsum.photos/id/1/200/300'
+   },
+   {
+      name: 'food2',
+      image: 'https://picsum.photos/id/2/200/300'
+   },
+   {
+      name: 'food3',
+      image: 'https://picsum.photos/id/3/200/300'
+   },
+   {
+      name: 'food4',
+      image: 'https://picsum.photos/id/4/200/300'
+   },
+   {
+      name: 'food5',
+      image: 'https://picsum.photos/id/5/200/300'
+   },
 
-/* 
-react          html
-component = element
-props       = attributes
-value       = value
-*/
-
+]
 
 function App() {
    return (
       <div>
          <h1>hello</h1>
-         {/* <Potato 
-            fav="kimchi"
-            something={true}
-            arr={['hello', 1, 2, 3, 4, true]}
-         /> */}
-         <Potato fav="food" />
-         <Potato fav="food2" />
-         <Potato fav="food3" />
-         <Potato fav="food4" />
+         {foodILike.map(dish => (
+            <Food name={dish.name} picture={dish.image} />
+         ))}
       </div>
    )
 }
