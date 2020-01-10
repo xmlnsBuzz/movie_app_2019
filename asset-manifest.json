@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/xmlnsBuzz/movie_app_2019.git/static/css/main.4ea18140.chunk.css",
+    "main.js": "/xmlnsBuzz/movie_app_2019.git/static/js/main.28e9b641.chunk.js",
+    "main.js.map": "/xmlnsBuzz/movie_app_2019.git/static/js/main.28e9b641.chunk.js.map",
+    "runtime-main.js": "/xmlnsBuzz/movie_app_2019.git/static/js/runtime-main.f9e2204e.js",
+    "runtime-main.js.map": "/xmlnsBuzz/movie_app_2019.git/static/js/runtime-main.f9e2204e.js.map",
+    "static/js/2.17071429.chunk.js": "/xmlnsBuzz/movie_app_2019.git/static/js/2.17071429.chunk.js",
+    "static/js/2.17071429.chunk.js.map": "/xmlnsBuzz/movie_app_2019.git/static/js/2.17071429.chunk.js.map",
+    "index.html": "/xmlnsBuzz/movie_app_2019.git/index.html",
+    "precache-manifest.25d696dbf3a4c028e192f6419116ab6e.js": "/xmlnsBuzz/movie_app_2019.git/precache-manifest.25d696dbf3a4c028e192f6419116ab6e.js",
+    "service-worker.js": "/xmlnsBuzz/movie_app_2019.git/service-worker.js",
+    "static/css/main.4ea18140.chunk.css.map": "/xmlnsBuzz/movie_app_2019.git/static/css/main.4ea18140.chunk.css.map",
+    "static/js/2.17071429.chunk.js.LICENSE": "/xmlnsBuzz/movie_app_2019.git/static/js/2.17071429.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f9e2204e.js",
+    "static/js/2.17071429.chunk.js",
+    "static/css/main.4ea18140.chunk.css",
+    "static/js/main.28e9b641.chunk.js"
+  ]
+}
